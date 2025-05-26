@@ -104,7 +104,7 @@ class Blockchain{
             throw new Error(`No pending votes for ${provinceName}`);
         }
 
-        // Check if province already finalized
+        
         const alreadyExists = this.chain.some(block => block.provinceName === provinceName);
         if (alreadyExists) {
             throw new Error(`${provinceName} has already been finalized`);
