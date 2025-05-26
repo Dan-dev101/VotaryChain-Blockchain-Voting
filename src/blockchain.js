@@ -106,6 +106,7 @@ class Blockchain{
         }
 
         
+        
         const alreadyExists = this.chain.some(block => block.provinceName === provinceName);
         if (alreadyExists) {
             throw new Error(`${provinceName} has already been finalized`);
