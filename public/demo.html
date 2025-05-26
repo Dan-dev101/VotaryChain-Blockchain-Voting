@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801&f[]=satoshi@300,400,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="demo-section-1">
+      <nav class="navbar">
+        <div class="logo">VotaryChain</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="home.html#learn-more">About</a></li>
+        </ul>
+      </nav>
+      <section class="demo-hero-section slide-in-top">
+        <div class="demo-hero-container">
+          <div class="demo-hero-text">
+            <h2 class="demo-hero-title">Try the VotaryChain Demo</h2>
+            <p class="demo-hero-subtitle">Experience secure, blockchain-enhanced voting in action.</p>
+            <a href="#key-gen-page" class="demo-button-link">Scroll Down to Begin</a>
+          </div>
+        </div>
+      </section>
+    </section> 
+
+    <section class="key-generator-section" id="key-gen-page">
+        <div class="key-gen-container">
+          <div class="key-gen-text">
+            <h2 class="key-gen-title">1. Generate Your Voter Key 🔑</h2>
+            <p class="key-gen-subtitle"><b>Description:</b> <br> Each voter must have a unique cryptographic identity. This identity is made up of a public key (shared) and a private key (kept secret). Your vote will be digitally signed using your private key to ensure authenticity just like a digital signature. <br><br> ⚠️ Never share your private key with anyone. It is your secure digital identity anyone with it can vote as you.</p>
+            <div class="generate-box">
+              <button class="generate-button" id="generate-button">Generate Key</button>
+            </div>
+            <div class="key-box">
+              <div class="key-row">
+                <p class="public-key">Public Key: <span class="public-key-output" id="public-key"></span></p>
+              </div>
+              <div class="key-row">
+                <p class="private-key">Private Key: <span class="private-key-output" id="private-key"></span></p>
+              </div>
+            </div>
+
+            <div class="next-row">
+              <a class="next-step-button" href="#voting-page">Next Step</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="voting-section" id="voting-page">
+      <div class="voting-container">
+        <div class="voting-text">
+            <h2 class="voting-title">2. Cast Your Vote 🗳️</h2>
+            <p class="voting-subtitle"><b>Description:</b> <br> Use your public key to identify yourself, and your private key to securely sign your vote. This ensures that only you can vote as you, and that the vote can't be tampered with. <br><br> ✔️ Your private key is never stored.<br> ✔️ The vote is digitally signed before being added to the blockchain.</p>
+
+            <form class="voting-form" id="voting-form">
+
+              <div class="form-row">
+                <label for="input-pub-key">Enter Public Key:</label> 
+                <input type="text" id="input-pub-key" name="fromVoter">
+              </div>
+              
+              <div class="form-row" method="POST">
+                <label for="candidate">Select Candidate:</label>
+                <select id="candidate" name="toCandidate">
+                  <option value="Justin Trudeau">Justin Trudeau</option>
+                  <option value="Pierre Poilievre">Pierre Poilievre</option>
+                  <option value="Jagmeet Singh">Jagmeet Singh</option>
+                  <option value="Yves-François Blanchet">Yves-François Blanchet</option>
+                  <option value="Elizabeth May">Elizabeth May</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="input-priv-key">Enter Private Key:</label>
+                <input type="password" id="input-priv-key" name="privateKey">
+                <input type="checkbox" onclick="showPassword()">Show Key
+              </div>
+
+              <div class="form-row">
+                <label for="province">Select Your Province:</label>
+                <select id="province" name="Province">
+                  <option value="Alberta">Alberta</option>
+                  <option value="British Columbia">British Columbia</option>
+                  <option value="Manitoba">Manitoba</option>
+                  <option value="New Brunswick">New Brunswick</option>
+                  <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                  <option value="Nova Scotia">Nova Scotia</option>
+                  <option value="Ontario">Ontario</option>
+                  <option value="Prince Edward Island">Prince Edward Island</option>
+                  <option value="Quebec">Saskatchewan </option>
+                </select>
+              </div>
+
+              <div class="submit-row"> 
+                <button class="submit-button" type="submit">Submit</button>
+              </div>
+          
+            </form>
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <script src="frontend.js"></script>
+
+
+
+</body>
+</html>
