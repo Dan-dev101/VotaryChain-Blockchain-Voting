@@ -3,7 +3,6 @@ const EC = require('elliptic').ec;
 const ec = new EC('secp256k1');
 
 
-// Represents a single vote from a voter to a candidate
 class Vote{
     constructor(fromVoter, toCandidate){
         this.fromVoter = fromVoter;
