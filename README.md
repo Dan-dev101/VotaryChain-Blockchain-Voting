@@ -2,6 +2,11 @@
 
 **VotaryChain** is a web-based voting platform that leverages blockchain technology and elliptic curve cryptography (secp256k1) to ensure secure, tamper-resistant elections. Built with a custom blockchain and a user-friendly interface, VotaryChain allows voters to generate cryptographic key pairs, cast digitally signed votes, and verify results on a public ledger.
 
+
+![Landing Page](images/Web-Landing.png)
+
+![Features-Page](images/Web-Features.png)
+
 ## 🔐 Features
 
 - **Custom Blockchain**: SHA-256 powered ledger records immutable voting blocks
@@ -71,16 +76,11 @@ VotaryChain implements a custom blockchain with the following components:
 ## 📸 Screenshots
 
 ### Key Generation Interface
-*Add screenshot of the key generation page*
+![Key Generation](images/Gen-page.png)
 
 ### Voting Interface
-*Add screenshot of the main voting interface*
+![Vote Submission](images/Vote-page.png)
 
-### Results Dashboard
-*Add screenshot of the results/blockchain view*
-
-### API Response Examples
-*Add screenshot of API endpoints in action*
 
 ## 🔧 API Endpoints
 
