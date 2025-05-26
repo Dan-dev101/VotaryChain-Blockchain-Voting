@@ -86,11 +86,12 @@ VotaryChain implements a custom blockchain with the following components:
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `GET` | `/api/keys` | Generate new cryptographic key pair |
-| `POST` | `/api/vote` | Submit a digitally signed vote |
-| `GET` | `/api/blockchain` | Retrieve current blockchain state |
-| `GET` | `/api/results` | Get voting results by province |
-| `POST` | `/api/validate` | Validate blockchain integrity |
+| `POST` | `/generate-key` | Generate new cryptographic key pair |
+| `POST` | `/vote` | Submit a digitally signed vote |
+| `POST` | `/finalize` | Finalize votes for a specific province |
+| `GET` | `/results` | Get voting results for all candidates |
+| `GET` | `/verify` | Validate blockchain integrity |
+| `GET` | `/chain` | Retrieve current blockchain state |
 
 ## 🛡️ Security Features
 
