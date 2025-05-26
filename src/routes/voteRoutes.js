@@ -49,7 +49,7 @@ router.get('/results', (req, res) => {
     res.json(results);
 });
 
-// GET /api/verify
+
 router.get('/verify', (req, res) => {
     const isValid = req.blockchain.isChainValid();
     res.json({ valid: isValid });

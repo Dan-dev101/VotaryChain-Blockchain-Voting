@@ -3,7 +3,7 @@ const EC = require('elliptic').ec;
 const ec = new EC('secp256k1');
 
 
-// Represents a single vote from a voter to a candidate
+
 class Vote{
     constructor(fromVoter, toCandidate){
         this.fromVoter = fromVoter;
@@ -105,7 +105,7 @@ class Blockchain{
             throw new Error(`No pending votes for ${provinceName}`);
         }
 
-        // Check if province already finalized
+        
         const alreadyExists = this.chain.some(block => block.provinceName === provinceName);
         if (alreadyExists) {
             throw new Error(`${provinceName} has already been finalized`);
